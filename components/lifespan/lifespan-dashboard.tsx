@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import {
   GraduationCap,
   HeartHandshake,
@@ -57,22 +56,26 @@ function isTabId(v: string | null): v is TabId {
 }
 
 export function LifespanDashboard() {
-  const searchParams = useSearchParams()
-  const router = useRouter()
-  const pathname = usePathname()
-  const param = searchParams.get("stage")
-  const [active, setActive] = useState<TabId>(isTabId(param) ? param : "early")
+  // Default to "early" so the page server-renders the first module; the deep-link
+  // (?stage=) is applied on mount via the History API — keeping SSR intact while
+  // still supporting shareable URLs and browser back/forward.
+  const [active, setActive] = useState<TabId>("early")
 
-  // Keep the active tab in sync with the URL (deep links, back/forward).
   useEffect(() => {
-    const s = searchParams.get("stage")
-    if (isTabId(s) && s !== active) setActive(s)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams])
+    const apply = () => {
+      const s = new URLSearchParams(window.location.search).get("stage")
+      if (isTabId(s)) setActive(s)
+    }
+    apply()
+    window.addEventListener("popstate", apply)
+    return () => window.removeEventListener("popstate", apply)
+  }, [])
 
   function selectTab(id: TabId) {
     setActive(id)
-    router.replace(`${pathname}?stage=${id}`, { scroll: false })
+    const url = new URL(window.location.href)
+    url.searchParams.set("stage", id)
+    window.history.replaceState(null, "", url.toString())
   }
 
   const current = TABS.find((t) => t.id === active)!

@@ -369,10 +369,10 @@ function DebtDelta() {
 
         <div>
           <ResponsiveContainer width="100%" height={220}>
-            <AreaChart data={data.merged} margin={{ top: 8, right: 8, left: -8, bottom: 0 }}>
+            <AreaChart data={data.merged} margin={{ top: 8, right: 8, left: 4, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
               <XAxis dataKey="month" stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => `${Math.round(v / 12)}y`} />
-              <YAxis stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => compactMoney(v)} width={46} />
+              <YAxis stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => compactMoney(v)} width={62} />
               <Tooltip content={<ChartTooltip formatter={(v) => compactMoney(v)} />} labelFormatter={(l) => `Month ${l}`} />
               <Area type="monotone" dataKey="men" name="Men · balance" stroke="var(--color-chart-1)" fill="transparent" strokeWidth={2.5} dot={false} />
               <Area type="monotone" dataKey="women" name="Women · balance" stroke="var(--color-chart-3)" fill="transparent" strokeWidth={2.5} dot={false} connectNulls />

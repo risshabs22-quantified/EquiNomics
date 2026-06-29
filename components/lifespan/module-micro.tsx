@@ -219,7 +219,7 @@ function WealthGapEngine() {
         </div>
         <div>
           <ResponsiveContainer width="100%" height={240}>
-            <AreaChart data={data.series} margin={{ top: 8, right: 8, left: -8, bottom: 0 }}>
+            <AreaChart data={data.series} margin={{ top: 8, right: 8, left: 4, bottom: 0 }}>
               <defs>
                 <linearGradient id="wealthFill" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="var(--color-chart-2)" stopOpacity={0.2} />
@@ -228,7 +228,7 @@ function WealthGapEngine() {
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
               <XAxis dataKey="age" stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => `${v}`} />
-              <YAxis stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => compactMoney(v)} width={48} />
+              <YAxis stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => compactMoney(v)} width={62} />
               <Tooltip content={<ChartTooltip formatter={(v) => compactMoney(v)} />} labelFormatter={(l) => `Age ${l}`} />
               <Area type="monotone" dataKey="required" name="Required path" stroke="var(--color-chart-2)" strokeWidth={2} strokeDasharray="5 4" fill="url(#wealthFill)" dot={false} />
               <Area type="monotone" dataKey="you" name="Your path" stroke="var(--color-chart-1)" strokeWidth={2.5} fill="transparent" dot={false} />

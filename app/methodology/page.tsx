@@ -48,8 +48,8 @@ export default function MethodologyPage() {
       </UL>
 
       <H2>The indicators, sourced</H2>
-      <div className="rounded-lg border border-border overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="rounded-lg border border-border overflow-x-auto">
+        <table className="w-full min-w-[440px] text-sm">
           <thead>
             <tr className="border-b border-border bg-secondary/40 text-left">
               <th className="px-4 py-3 font-medium">Indicator</th>

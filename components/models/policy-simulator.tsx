@@ -80,7 +80,7 @@ export function PolicySimulator({ compact = false }: { compact?: boolean }) {
 
       {/* Output */}
       <div className="bg-background p-6">
-        <div className="grid grid-cols-3 gap-px bg-border border border-border rounded-md overflow-hidden mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-border rounded-md overflow-hidden mb-6">
           <Stat
             label="Projected gap · 2036"
             value={`${result.finalGap.toFixed(1)}%`}

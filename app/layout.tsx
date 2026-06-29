@@ -71,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${jakarta.variable} ${plexMono.variable} ${merriweather.variable} font-sans antialiased min-h-screen flex flex-col`}
+        className={`${playfair.variable} ${jakarta.variable} ${plexMono.variable} ${merriweather.variable} font-sans antialiased min-h-screen flex flex-col overflow-x-clip`}
       >
         <SiteHeader />
         <div className="flex-1">{children}</div>

@@ -215,10 +215,10 @@ function MotherhoodProjector() {
         </div>
         <div>
           <ResponsiveContainer width="100%" height={240}>
-            <LineChart data={series} margin={{ top: 8, right: 8, left: -8, bottom: 0 }}>
+            <LineChart data={series} margin={{ top: 8, right: 8, left: 4, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
               <XAxis dataKey="year" stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => `+${v}y`} />
-              <YAxis stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => compactMoney(v)} width={46} />
+              <YAxis stroke="var(--muted-foreground)" fontSize={11} tickFormatter={(v) => compactMoney(v)} width={62} />
               <Tooltip content={<ChartTooltip formatter={(v) => compactMoney(v)} />} labelFormatter={(l) => `${l} yrs after first birth`} />
               <Line type="monotone" dataKey="father" name="Father" stroke="var(--color-chart-1)" strokeWidth={2.5} dot={false} />
               <Line type="monotone" dataKey="counterfactual" name="No-child counterfactual" stroke="var(--muted-foreground)" strokeWidth={1.5} strokeDasharray="5 4" dot={false} />

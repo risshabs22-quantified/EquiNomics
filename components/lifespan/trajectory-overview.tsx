@@ -134,7 +134,7 @@ export function TrajectoryOverview() {
 
       <div className="p-5 sm:p-6">
         <ResponsiveContainer width="100%" height={300}>
-          <AreaChart data={data.rows} margin={{ top: 8, right: 8, left: -8, bottom: 0 }}>
+          <AreaChart data={data.rows} margin={{ top: 8, right: 8, left: 4, bottom: 0 }}>
             <defs>
               <linearGradient id="menFill" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="var(--color-chart-1)" stopOpacity={0.18} />
@@ -156,7 +156,7 @@ export function TrajectoryOverview() {
               stroke="var(--muted-foreground)"
               fontSize={11}
               tickFormatter={(v) => compactMoney(v)}
-              width={48}
+              width={62}
             />
             <Tooltip
               content={<ChartTooltip formatter={(v) => compactMoney(v)} />}

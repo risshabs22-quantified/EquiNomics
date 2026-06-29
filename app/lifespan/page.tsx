@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import type { Metadata } from "next"
 import { LifespanDashboard } from "@/components/lifespan/lifespan-dashboard"
 
@@ -9,15 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function LifespanPage() {
-  return (
-    <Suspense
-      fallback={
-        <div className="mx-auto max-w-7xl px-5 lg:px-10 py-20 text-muted-foreground">
-          Loading the Lifespan Trajectory Model…
-        </div>
-      }
-    >
-      <LifespanDashboard />
-    </Suspense>
-  )
+  return <LifespanDashboard />
 }
