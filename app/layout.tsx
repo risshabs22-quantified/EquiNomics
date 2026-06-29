@@ -39,6 +39,7 @@ const merriweather = Merriweather({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://equinomics.vercel.app"),
   title: {
     default: "EquiNomics — A Narrative Economics of Gender Inequality",
     template: "%s | EquiNomics",
@@ -60,6 +61,14 @@ export const metadata: Metadata = {
     description:
       "Where macroeconomic data meets lived experience. A research platform on the economics of gender inequality.",
     type: "website",
+    siteName: "EquiNomics",
+    url: "https://equinomics.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EquiNomics — A Narrative Economics of Gender Inequality",
+    description:
+      "Where macroeconomic data meets lived experience. A research platform on the economics of gender inequality.",
   },
 }
 
