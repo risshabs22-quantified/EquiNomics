@@ -1,27 +1,40 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Source_Serif_4, Geist_Mono } from "next/font/google"
+import {
+  Playfair_Display,
+  Plus_Jakarta_Sans,
+  IBM_Plex_Mono,
+  Merriweather,
+} from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Toaster } from "@/components/ui/sonner"
 import "./globals.css"
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-playfair",
   display: "swap",
 })
 
-const sourceSerif = Source_Serif_4({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-source-serif",
+  variable: "--font-jakarta",
   display: "swap",
 })
 
-const geistMono = Geist_Mono({
+const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-geist-mono",
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-mono",
+  display: "swap",
+})
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-merriweather",
   display: "swap",
 })
 
@@ -56,9 +69,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${sourceSerif.variable} ${geistMono.variable} font-sans antialiased min-h-screen flex flex-col`}
+        className={`${playfair.variable} ${jakarta.variable} ${plexMono.variable} ${merriweather.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
         <SiteHeader />
         <div className="flex-1">{children}</div>

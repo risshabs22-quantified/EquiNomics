@@ -39,7 +39,7 @@ function AnnotatedParagraph({
 
   if (!match) {
     return (
-      <p className="mb-5 font-serif text-lg leading-[1.85] text-foreground/90">
+      <p className="mb-5 font-read text-[17px] leading-[1.9] text-foreground/90">
         {text}
       </p>
     )

@@ -12,10 +12,12 @@ const COLUMNS = [
     ],
   },
   {
-    title: "Platform",
+    title: "Interactive Models",
     links: [
-      { href: "/about", label: "About EquiNomics" },
-      { href: "/methodology#concepts", label: "Economic Glossary" },
+      { href: "/models/policy-simulator", label: "Policy Simulator" },
+      { href: "/models/shadow-economy", label: "Shadow Economy Invoice" },
+      { href: "/models/intersectional", label: "Intersectional Examiner" },
+      { href: "/models/pink-tax", label: "Pink Tax Indexer" },
     ],
   },
   {
@@ -42,7 +44,7 @@ export function SiteFooter() {
                 height={32}
                 className="h-8 w-8 rounded-md"
               />
-              <span className="font-serif text-xl font-semibold tracking-tight">
+              <span className="font-display text-xl font-bold tracking-tight">
                 Equi<span className="text-primary">Nomics</span>
               </span>
             </div>

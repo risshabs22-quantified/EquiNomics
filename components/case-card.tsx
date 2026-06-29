@@ -1,25 +1,34 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowUpRight, Briefcase, Clock } from "lucide-react"
-import type { CaseStudy } from "@/lib/data"
+import type { CaseStudy, Phenomenon } from "@/lib/data"
 import { formatUSD } from "@/lib/data"
 import { PhenomenonBadge } from "@/components/phenomenon-badge"
 
-export function CaseCard({ study }: { study: CaseStudy }) {
+export function CaseCard({
+  study,
+  onTagClick,
+}: {
+  study: CaseStudy
+  /** When provided, phenomenon tags become buttons that drive relational lookups. */
+  onTagClick?: (p: Phenomenon) => void
+}) {
   return (
     <Link
       href={`/archive/${study.slug}`}
-      className="group flex flex-col h-full rounded-lg border border-border bg-card p-5 transition-all hover:border-primary/50 hover:bg-card/80"
+      className="group flex flex-col h-full rounded-lg border border-border bg-card p-5 transition-all hover:border-primary/60 hover:shadow-[0_2px_16px_-8px_rgba(0,0,0,0.18)]"
     >
       <div className="flex items-center justify-between gap-2 mb-3">
         <span className="eyebrow">{study.sector}</span>
         {study.userContributed && (
-          <span className="rounded-sm bg-accent/15 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-accent">
+          <span className="rounded-sm bg-academic/10 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-academic">
             New · Contributed
           </span>
         )}
       </div>
 
-      <h3 className="font-serif text-lg font-semibold leading-snug text-balance group-hover:text-primary transition-colors">
+      <h3 className="font-display text-xl font-bold leading-snug text-balance group-hover:text-primary transition-colors">
         {study.headline}
       </h3>
 
@@ -28,9 +37,23 @@ export function CaseCard({ study }: { study: CaseStudy }) {
       </p>
 
       <div className="mt-4 flex flex-wrap gap-1.5">
-        {study.phenomena.slice(0, 3).map((p) => (
-          <PhenomenonBadge key={p} phenomenon={p} />
-        ))}
+        {study.phenomena.slice(0, 3).map((p) =>
+          onTagClick ? (
+            <button
+              key={p}
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                onTagClick(p)
+              }}
+              className="inline-flex items-center rounded-md border border-border bg-secondary/60 px-2 py-0.5 font-mono text-[11px] tracking-tight text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              {p}
+            </button>
+          ) : (
+            <PhenomenonBadge key={p} phenomenon={p} />
+          ),
+        )}
       </div>
 
       <div className="mt-4 pt-4 border-t border-border grid grid-cols-3 gap-2 text-xs">
@@ -62,15 +85,15 @@ export function CaseRow({ study }: { study: CaseStudy }) {
   return (
     <Link
       href={`/archive/${study.slug}`}
-      className="group grid grid-cols-12 items-center gap-3 border-b border-border px-3 py-4 transition-colors hover:bg-secondary/40"
+      className="group grid grid-cols-12 items-center gap-3 border-b border-border px-3 py-4 transition-colors hover:bg-secondary/50 last:border-0"
     >
       <div className="col-span-12 md:col-span-5">
         <div className="flex items-center gap-2">
-          <span className="font-serif font-medium group-hover:text-primary transition-colors">
+          <span className="font-display font-semibold group-hover:text-primary transition-colors">
             {study.headline}
           </span>
           {study.userContributed && (
-            <span className="rounded-sm bg-accent/15 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-accent">
+            <span className="rounded-sm bg-academic/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-academic">
               New
             </span>
           )}
