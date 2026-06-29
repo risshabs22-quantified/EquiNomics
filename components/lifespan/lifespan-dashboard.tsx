@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import {
   GraduationCap,
   HeartHandshake,
@@ -49,8 +50,31 @@ const TABS = [
   },
 ] as const
 
+type TabId = (typeof TABS)[number]["id"]
+
+function isTabId(v: string | null): v is TabId {
+  return !!v && TABS.some((t) => t.id === v)
+}
+
 export function LifespanDashboard() {
-  const [active, setActive] = useState<(typeof TABS)[number]["id"]>("early")
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const pathname = usePathname()
+  const param = searchParams.get("stage")
+  const [active, setActive] = useState<TabId>(isTabId(param) ? param : "early")
+
+  // Keep the active tab in sync with the URL (deep links, back/forward).
+  useEffect(() => {
+    const s = searchParams.get("stage")
+    if (isTabId(s) && s !== active) setActive(s)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams])
+
+  function selectTab(id: TabId) {
+    setActive(id)
+    router.replace(`${pathname}?stage=${id}`, { scroll: false })
+  }
+
   const current = TABS.find((t) => t.id === active)!
   const Active = current.Component
 
@@ -68,6 +92,12 @@ export function LifespanDashboard() {
           originate in early adulthood and compound — through caregiving years,
           corporate ladders, and capital systems — all the way to retirement.
         </p>
+        <a
+          href="/methodology#instruments"
+          className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+        >
+          How each instrument is calculated →
+        </a>
       </header>
 
       {/* Trajectory thesis chart */}
@@ -90,7 +120,7 @@ export function LifespanDashboard() {
                   key={t.id}
                   role="tab"
                   aria-selected={on}
-                  onClick={() => setActive(t.id)}
+                  onClick={() => selectTab(t.id)}
                   className={cn(
                     "flex-1 min-w-[150px] flex items-center gap-3 rounded-md px-4 py-3 text-left transition-colors",
                     on

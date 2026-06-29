@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { DocPage, H2, P, UL, LI } from "@/components/doc-page"
+import { InstrumentMethodology } from "@/components/instrument-methodology"
 import { GLOSSARY, MACRO_INDICATORS } from "@/lib/data"
 
 export const metadata: Metadata = {
@@ -71,6 +72,16 @@ export default function MethodologyPage() {
           </tbody>
         </table>
       </div>
+
+      <H2 id="instruments">Interactive instruments — algorithms</H2>
+      <P>
+        Every interactive model on EquiNomics is driven by a transparent, documented
+        algorithm — move an input and the output recomputes deterministically. The
+        coefficients below are illustrative and directionally calibrated to the
+        labor-economics literature; they are not official statistics, and the models
+        are pedagogical instruments rather than forecasting tools.
+      </P>
+      <InstrumentMethodology />
 
       <H2>Qualitative case studies</H2>
       <P>
