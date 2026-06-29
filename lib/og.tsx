@@ -11,13 +11,14 @@ const PALETTE = {
   ink: "#262A31",
   slate: "#2E4068",
   amber: "#C8881F",
+  amberBg: "#F6ECD8",
   muted: "#6B7280",
   border: "#E3E1DB",
 }
 
 /**
  * Fetch Playfair Display (700) as a TTF subset for the requested glyphs.
- * Returns null on any failure so callers fall back to the system serif/sans —
+ * Returns null on any failure so callers fall back to the system serif —
  * the image still renders, just without the display face.
  */
 async function loadPlayfair(text: string): Promise<ArrayBuffer | null> {
@@ -49,13 +50,25 @@ async function loadLogo(): Promise<string | null> {
 export interface OgContent {
   kicker: string
   line1: string
-  line2: string
+  /** Optional second headline line, rendered in slate. */
+  line2?: string
   subtitle: string
+  /** Optional amber pill (e.g. a headline stat). */
+  tag?: string
+  /** Headline font size; default 72. Use a smaller size for long titles. */
+  titleSize?: number
 }
 
-export async function createOgImage({ kicker, line1, line2, subtitle }: OgContent) {
+export async function createOgImage({
+  kicker,
+  line1,
+  line2,
+  subtitle,
+  tag,
+  titleSize = 72,
+}: OgContent) {
   const [font, logo] = await Promise.all([
-    loadPlayfair(`${kicker}${line1}${line2}EquiNomics`),
+    loadPlayfair(`${kicker}${line1}${line2 ?? ""}${tag ?? ""}EquiNomics`),
     loadLogo(),
   ])
   const display = font ? "Playfair" : "serif"
@@ -69,7 +82,7 @@ export async function createOgImage({ kicker, line1, line2, subtitle }: OgConten
           display: "flex",
           flexDirection: "column",
           backgroundColor: PALETTE.paper,
-          padding: "60px 70px",
+          padding: "58px 70px",
           position: "relative",
           fontFamily: "sans-serif",
         }}
@@ -91,35 +104,52 @@ export async function createOgImage({ kicker, line1, line2, subtitle }: OgConten
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           {logo ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={logo} width={72} height={72} style={{ borderRadius: 14 }} alt="" />
+            <img src={logo} width={68} height={68} style={{ borderRadius: 14 }} alt="" />
           ) : null}
-          <div style={{ display: "flex", fontSize: 38, fontFamily: display, fontWeight: 700 }}>
+          <div style={{ display: "flex", fontSize: 36, fontFamily: display, fontWeight: 700 }}>
             <span style={{ color: PALETTE.ink }}>Equi</span>
             <span style={{ color: PALETTE.slate }}>Nomics</span>
           </div>
         </div>
 
-        {/* headline */}
+        {/* headline block */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             flex: 1,
             justifyContent: "center",
-            gap: 22,
+            gap: 18,
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              fontSize: 19,
-              letterSpacing: 4,
-              color: PALETTE.muted,
-              textTransform: "uppercase",
-              fontWeight: 600,
-            }}
-          >
-            {kicker}
+          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+            <div
+              style={{
+                display: "flex",
+                fontSize: 18,
+                letterSpacing: 4,
+                color: PALETTE.muted,
+                textTransform: "uppercase",
+                fontWeight: 600,
+              }}
+            >
+              {kicker}
+            </div>
+            {tag ? (
+              <div
+                style={{
+                  display: "flex",
+                  fontSize: 18,
+                  color: PALETTE.amber,
+                  backgroundColor: PALETTE.amberBg,
+                  padding: "4px 14px",
+                  borderRadius: 999,
+                  fontWeight: 600,
+                }}
+              >
+                {tag}
+              </div>
+            ) : null}
           </div>
           <div
             style={{
@@ -127,12 +157,15 @@ export async function createOgImage({ kicker, line1, line2, subtitle }: OgConten
               flexDirection: "column",
               fontFamily: display,
               fontWeight: 700,
-              fontSize: 72,
-              lineHeight: 1.04,
+              fontSize: titleSize,
+              lineHeight: 1.05,
+              maxWidth: 1040,
             }}
           >
             <div style={{ display: "flex", color: PALETTE.ink }}>{line1}</div>
-            <div style={{ display: "flex", color: PALETTE.slate }}>{line2}</div>
+            {line2 ? (
+              <div style={{ display: "flex", color: PALETTE.slate }}>{line2}</div>
+            ) : null}
           </div>
         </div>
 
@@ -146,10 +179,10 @@ export async function createOgImage({ kicker, line1, line2, subtitle }: OgConten
             paddingTop: 22,
           }}
         >
-          <div style={{ display: "flex", fontSize: 23, color: PALETTE.muted, maxWidth: 820 }}>
+          <div style={{ display: "flex", fontSize: 22, color: PALETTE.muted, maxWidth: 820 }}>
             {subtitle}
           </div>
-          <div style={{ display: "flex", fontSize: 21, color: PALETTE.slate, fontWeight: 600 }}>
+          <div style={{ display: "flex", fontSize: 20, color: PALETTE.slate, fontWeight: 600 }}>
             equinomics.vercel.app
           </div>
         </div>

@@ -6,9 +6,11 @@ const COLUMNS = [
     title: "Research",
     links: [
       { href: "/", label: "Macro Dashboard" },
+      { href: "/lifespan", label: "Lifespan Trajectory Model" },
+      { href: "/accountability", label: "Accountability Matrix" },
+      { href: "/models", label: "Interactive Models" },
       { href: "/archive", label: "Case Study Archive" },
       { href: "/methodology", label: "Methodology & Sources" },
-      { href: "/contribute", label: "Contribute Your Data" },
     ],
   },
   {
