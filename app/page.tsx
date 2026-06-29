@@ -84,18 +84,21 @@ export default function DashboardPage() {
               <span className="text-primary italic">numbers.</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl text-pretty">
-              EquiNomics pairs rigorous labor-economics data with the people inside
-              it — and turns static statistics into interactive models you can
-              interrogate: occupational segregation, the motherhood penalty, the care
-              economy, and the gender wealth gap.
+              Our framework — the{" "}
+              <span className="text-foreground font-medium">
+                Macroeconomic Lifespan Trajectory Model
+              </span>{" "}
+              — traces how a small early gap compounds across an entire working life:
+              from a first negotiation, through the caregiving years and the corporate
+              ladder, all the way to the retirement wealth gap.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Link
-                href="/models"
+                href="/lifespan"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
               >
                 <LineChart className="h-4 w-4" />
-                Explore the Models
+                Open the Lifespan Model
               </Link>
               <Link
                 href="/archive"

@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 
 const NAV = [
   { href: "/", label: "Dashboard" },
+  { href: "/lifespan", label: "Lifespan Model" },
   { href: "/models", label: "Models" },
   { href: "/archive", label: "Archive" },
   { href: "/methodology", label: "Methodology" },
@@ -72,7 +73,7 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-6">
             {NAV.map((item) => (
               <Link
                 key={item.href}
@@ -94,13 +95,13 @@ export function SiteHeader() {
 
           <Link
             href="/contribute"
-            className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+            className="hidden lg:inline-flex items-center px-4 py-2 text-sm font-semibold bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
           >
             Contribute Data
           </Link>
 
           <button
-            className="md:hidden text-foreground p-1"
+            className="lg:hidden text-foreground p-1"
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle navigation"
           >
@@ -110,7 +111,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-border bg-background">
           <nav className="flex flex-col px-5 py-3 divide-rule">
             {NAV.map((item) => (
               <Link
