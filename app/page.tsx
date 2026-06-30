@@ -78,19 +78,20 @@ export default function DashboardPage() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-5 lg:px-10 grid lg:grid-cols-12 gap-0">
           <div className="lg:col-span-8 lg:border-r border-border lg:pr-10 py-14 lg:py-20 animate-fade-up">
-            <p className="eyebrow mb-5">A Platform for Narrative Economics</p>
+            <p className="eyebrow mb-5">An economics project about inequality</p>
             <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.0] tracking-tight text-balance">
-              The economy is a story told in{" "}
-              <span className="text-primary italic">numbers.</span>
+              Behind every statistic is{" "}
+              <span className="text-primary italic">someone's life.</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl text-pretty">
-              Our framework — the{" "}
+              I kept getting stuck on one question: how does a small gap at 22 turn
+              into a huge one by 65? So I built the{" "}
               <span className="text-foreground font-medium">
                 Macroeconomic Lifespan Trajectory Model
               </span>{" "}
-              — traces how a small early gap compounds across an entire working life:
-              from a first negotiation, through the caregiving years and the corporate
-              ladder, all the way to the retirement wealth gap.
+              to follow it the whole way — the first salary you negotiate, the years
+              that go to unpaid care, the climb up the ladder, and the retirement
+              savings that never quite catch up.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Link
@@ -135,7 +136,7 @@ export default function DashboardPage() {
               href="/methodology"
               className="mt-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
             >
-              Sources & methodology <ArrowRight className="h-3.5 w-3.5" />
+              Where these numbers come from <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </aside>
         </div>
@@ -146,13 +147,13 @@ export default function DashboardPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-10 py-16">
           <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
             <div className="max-w-2xl">
-              <p className="eyebrow mb-2">Interactive · Predictive Model</p>
+              <p className="eyebrow mb-2">Interactive · Try it yourself</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
-                What would actually close the gap?
+                So what would actually close the gap?
               </h2>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                This is not a chart you read — it's a model you run. Pull the policy
-                levers and watch the projected national wage gap respond over a decade.
+                You don't just read this one — you run it. Drag the policy sliders and
+                watch the projected national wage gap move over the next ten years.
               </p>
             </div>
             <Link
@@ -170,9 +171,9 @@ export default function DashboardPage() {
       <section className="mx-auto max-w-7xl px-5 lg:px-10 py-16">
         <div className="flex items-end justify-between gap-4 mb-6">
           <div>
-            <p className="eyebrow mb-2">Macro Dashboard</p>
+            <p className="eyebrow mb-2">The big picture</p>
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              Headline Indicators
+              The numbers I keep coming back to
             </h2>
           </div>
         </div>
@@ -187,12 +188,12 @@ export default function DashboardPage() {
       <section className="border-y border-border bg-secondary/30">
         <div className="mx-auto max-w-7xl px-5 lg:px-10 py-16">
           <h2 className="font-display text-3xl font-bold tracking-tight mb-8">
-            The Data, Over Time
+            How this has changed over time
           </h2>
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-display text-lg font-bold">
-                The narrowing — but persistent — pay gap
+                The pay gap is closing — just painfully slowly
               </h3>
               <p className="text-sm text-muted-foreground mt-1 mb-4">
                 Women's earnings per $1 earned by men, 1980–2024.
@@ -201,20 +202,21 @@ export default function DashboardPage() {
             </div>
             <div className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-display text-lg font-bold">
-                Labor force participation, by gender
+                Who's actually in the workforce, by gender
               </h3>
               <p className="text-sm text-muted-foreground mt-1 mb-4">
-                A convergence that stalled — shaped by the structure of care.
+                The two lines were closing in on each other, then stalled — and a lot
+                of that comes down to who does the caregiving.
               </p>
               <ParticipationChart />
             </div>
             <div className="rounded-lg border border-border bg-card p-5 lg:col-span-2">
               <h3 className="font-display text-lg font-bold">
-                Occupational segregation & the devaluation of "women's work"
+                Occupational segregation, and how "women's work" gets paid less
               </h3>
               <p className="text-sm text-muted-foreground mt-1 mb-4">
-                Median wage by occupation — female-dominated fields cluster at lower
-                pay despite comparable skill.
+                Median wage by occupation. Fields that are mostly women cluster at the
+                bottom, even when the work takes just as much skill.
               </p>
               <SegregationChart />
             </div>
@@ -226,9 +228,9 @@ export default function DashboardPage() {
       <section className="mx-auto max-w-7xl px-5 lg:px-10 py-16">
         <div className="flex items-end justify-between gap-4 mb-6">
           <div>
-            <p className="eyebrow mb-2">The Instruments</p>
+            <p className="eyebrow mb-2">The tools</p>
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              Five ways to interrogate the data
+              Five ways to dig into the data yourself
             </h2>
           </div>
           <Link
@@ -264,13 +266,13 @@ export default function DashboardPage() {
       <section className="border-t border-border bg-secondary/30">
         <div className="mx-auto max-w-7xl px-5 lg:px-10 py-16">
           <div className="mb-8 max-w-2xl">
-            <p className="eyebrow mb-2">Qualitative Case Studies</p>
+            <p className="eyebrow mb-2">Real stories</p>
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              The people inside the indicators
+              The people behind the numbers
             </h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Each story is a data point, annotated with the economic theory that
-              explains it — and updated in real time as the community contributes.
+              Every story here is one data point, with the economics that explains it
+              written right next to it. New ones show up as people add their own.
             </p>
           </div>
           <LiveCasePanel />
