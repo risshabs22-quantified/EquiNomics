@@ -3,18 +3,18 @@ import { ModelShell } from "@/components/models/model-shell"
 import { IntersectionalExaminer } from "@/components/models/intersectional-examiner"
 
 export const metadata: Metadata = {
-  title: "Intersectional Disparity Cross-Examiner",
+  title: "Intersectional Pay Gap Chart",
   description:
-    "Toggle intersecting variables — gender with race, education, or region — to visually isolate the compounding economic penalties that single-axis statistics conceal.",
+    "Cross gender with race, education, or region and see how pay gaps stack — the part a single headline average hides completely.",
 }
 
 export default function IntersectionalPage() {
   return (
     <ModelShell
       index="03"
-      kicker="Dynamic Regression"
-      title="Intersectional Disparity Cross-Examiner"
-      lede="A single average hides the compounding. Toggle gender against race, education, or region to see how penalties stack — the gap for a Hispanic woman is not the gender gap plus the race gap, but a steeper intersection of the two."
+      kicker="Stack the factors"
+      title="Where the penalties stack up"
+      lede="One average number hides a lot. Toggle gender against race, education, or region and you'll see how the gaps pile on — a Hispanic woman's gap isn't the gender gap plus the race gap, it's worse than that."
     >
       <IntersectionalExaminer />
     </ModelShell>

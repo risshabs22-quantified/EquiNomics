@@ -38,7 +38,7 @@ export const POLICY_LEVERS: PolicyLever[] = [
     default: 12,
     maxEffect: 2.6,
     blurb:
-      "Modeled as an inverted-U: moderate, well-paid leave narrows the gap, but very long leave (>30 wks) can entrench career interruptions and erode the benefit.",
+      "I modeled this as a curve, not a straight line. A solid stretch of well-paid leave narrows the gap, but really long leave (past about 30 weeks) starts to backfire — long absences make it harder to climb back to where you were.",
   },
   {
     id: "transparency",
@@ -50,7 +50,7 @@ export const POLICY_LEVERS: PolicyLever[] = [
     default: 30,
     maxEffect: 3.0,
     blurb:
-      "Pay-range disclosure and reporting requirements compress unexplained within-firm gaps. Strong, near-linear effect.",
+      "When companies have to post pay ranges and report their numbers, the unexplained gaps inside a firm start to shrink. This one has a strong, steady effect.",
   },
   {
     id: "childcare",
@@ -62,7 +62,7 @@ export const POLICY_LEVERS: PolicyLever[] = [
     default: 25,
     maxEffect: 4.2,
     blurb:
-      "Lowering the price of care raises maternal labor-force participation and continuity — the single largest lever in the model.",
+      "Make childcare cheaper and more mothers can keep working without long breaks. It's the single biggest lever here.",
   },
   {
     id: "flex",
@@ -74,7 +74,7 @@ export const POLICY_LEVERS: PolicyLever[] = [
     default: 20,
     maxEffect: 2.0,
     blurb:
-      "Right-to-flexible-hours reduces the wage premium on 'greedy' inflexible work that disproportionately penalizes caregivers.",
+      "Protecting flexible hours chips away at the bonus that rigid, always-on jobs pay — the kind of jobs that punish anyone with caregiving to do.",
   },
 ]
 
@@ -112,7 +112,7 @@ export const LENSES: LensData[] = [
     id: "race",
     label: "Gender × Race / Ethnicity",
     caption:
-      "Median earnings by race and gender. The compounding penalty is sharpest for Black and Hispanic women, measured against the highest-earning male group.",
+      "Median earnings by race and gender. The penalty stacks hardest on Black and Hispanic women once you measure against the highest-earning group of men.",
     referenceValue: 86,
     referenceLabel: "Asian men",
     rows: [
@@ -126,7 +126,7 @@ export const LENSES: LensData[] = [
     id: "education",
     label: "Gender × Education",
     caption:
-      "Earnings rise with education for everyone — but the absolute gender gap widens at higher degrees, where 'greedy work' premia concentrate.",
+      "More education means more money for everyone — but the dollar gap between men and women actually gets wider at the top, where the highest-paying, most demanding jobs sit.",
     referenceValue: 130,
     referenceLabel: "Advanced-degree men",
     rows: [
@@ -141,7 +141,7 @@ export const LENSES: LensData[] = [
     id: "region",
     label: "Gender × Region",
     caption:
-      "Median earnings by U.S. census region. Even where pay is highest, the within-region gap persists — geography shifts the level, not the gap.",
+      "Median earnings by U.S. census region. Even in the highest-paying regions the gap doesn't go away — moving changes the paychecks, not the distance between them.",
     referenceValue: 84,
     referenceLabel: "Northeast men",
     rows: [

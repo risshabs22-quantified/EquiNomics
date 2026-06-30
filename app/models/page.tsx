@@ -5,40 +5,40 @@ import { ArrowUpRight, LineChart, FileText, GitCompareArrows, Tags } from "lucid
 export const metadata: Metadata = {
   title: "Interactive Models",
   description:
-    "A suite of interactive econometric instruments: the Policy Simulator, Shadow Economy Invoice, Intersectional Cross-Examiner, and Pink Tax Indexer.",
+    "Four tools you can actually run: a policy simulator, a care-work invoice generator, an intersectional pay-gap chart, and a pink tax calculator.",
 }
 
 const MODELS = [
   {
     index: "01",
     href: "/models/policy-simulator",
-    kicker: "Predictive Modeling",
-    title: "Econometric Policy Simulator",
-    desc: "Adjust paid leave, wage transparency, childcare and flexible-work levers; watch the projected gender wage gap respond over ten years, decomposed by lever.",
+    kicker: "Run the policy",
+    title: "Policy Simulator",
+    desc: "Move the sliders for paid leave, pay transparency, childcare, and flexible work, and watch the projected wage gap respond over ten years — with each lever's share broken out.",
     icon: LineChart,
   },
   {
     index: "02",
     href: "/models/shadow-economy",
-    kicker: "The Care Economy, Quantified",
-    title: "Shadow Economy Invoice Generator",
-    desc: "Map weekly hours of domestic labor, caregiving and mental load to localized market wages — and download a formal SVG 'Invoice to the Economy'.",
+    kicker: "Put a price on it",
+    title: "Shadow Economy Invoice",
+    desc: "Take your weekly hours of housework, caregiving, and mental load, price them at real market wages, and download an actual invoice addressed to the economy.",
     icon: FileText,
   },
   {
     index: "03",
     href: "/models/intersectional",
-    kicker: "Dynamic Regression",
-    title: "Intersectional Disparity Cross-Examiner",
-    desc: "Toggle gender against race, education or region to isolate the compounding penalties that single-axis averages conceal.",
+    kicker: "Stack the factors",
+    title: "Intersectional Pay Gap Chart",
+    desc: "Cross gender with race, education, or region and watch the penalties stack — the part a single headline average completely hides.",
     icon: GitCompareArrows,
   },
   {
     index: "04",
     href: "/models/pink-tax",
-    kicker: "Consumer Price Discrimination",
-    title: "Pink Tax Inflation Indexer",
-    desc: "Index your personal 'Gender Inflation Premium' across categories — annually, over a lifetime, and as forgone investment growth.",
+    kicker: "The pink tax",
+    title: "Pink Tax Calculator",
+    desc: "Add up the markups on products aimed at women across categories — what it costs you in a year, over a lifetime, and as the investment growth you never got.",
     icon: Tags,
   },
 ]
@@ -47,15 +47,15 @@ export default function ModelsHub() {
   return (
     <main className="mx-auto max-w-7xl px-5 lg:px-10 py-12">
       <header className="border-b border-border pb-10 mb-10 max-w-3xl">
-        <p className="eyebrow mb-3">The Instruments</p>
+        <p className="eyebrow mb-3">The tools</p>
         <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.04] tracking-tight text-balance">
-          Don't read the data.{" "}
-          <span className="text-primary italic">Interrogate</span> it.
+          Don't just read the data.{" "}
+          <span className="text-primary italic">Poke</span> at it.
         </h1>
         <p className="mt-5 text-lg text-muted-foreground leading-relaxed text-pretty">
-          Four interactive econometric instruments turn static statistics into
-          state-driven models you can manipulate. Each is built on a transparent,
-          documented algorithm — move an input, and the output recomputes in real time.
+          Four tools that take a flat statistic and let you push on it. Each one runs
+          on math I've documented in the open, so when you move something, you can see
+          exactly why the answer changes.
         </p>
       </header>
 
@@ -82,7 +82,7 @@ export default function ModelsHub() {
                 {m.desc}
               </p>
               <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                Open instrument
+                Open tool
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </Link>
@@ -93,12 +93,13 @@ export default function ModelsHub() {
       <div className="mt-10 rounded-lg border border-border bg-card p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h3 className="font-display text-xl font-bold">
-            Plus: the Relational Case Archive
+            Plus: the Case Study Archive
           </h3>
           <p className="text-sm text-muted-foreground mt-1 max-w-xl">
-            In the archive, clicking any <span className="font-mono text-primary">#phenomenon</span>{" "}
-            tag surfaces the exact macro statistic that correlates with that lived
-            experience — the fifth interactive instrument.
+            In the archive, click any{" "}
+            <span className="font-mono text-primary">#phenomenon</span> tag and
+            you'll see the macro stat that goes with it — the same numbers from
+            the dashboard, tied to a real story.
           </p>
         </div>
         <Link

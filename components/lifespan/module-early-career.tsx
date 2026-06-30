@@ -70,9 +70,9 @@ function MajorROI() {
   return (
     <FeaturePanel
       index="01"
-      kicker="Wage Elasticity"
-      title="Major ROI & Wage Elasticity Calculator"
-      blurb="Choose a field of study and trace the gendered wage trajectory over the first decade of work — the segregation premium begins on day one."
+      kicker="Pick a major"
+      title="What your major is worth, by gender"
+      blurb="Pick a field and follow what men and women in it earn over the first ten years. The gap doesn't wait for mid-career — it's already there on day one."
     >
       <div className="grid lg:grid-cols-[300px_1fr] gap-6">
         <div className="space-y-4">
@@ -105,10 +105,10 @@ function MajorROI() {
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
               {major.womenShare > 60
-                ? "A feminized field — associated with wage devaluation."
+                ? "Mostly women — and fields like this tend to pay less, even when the work takes the same skill."
                 : major.womenShare < 30
-                  ? "A male-dominated field — higher pay, steeper entry barriers."
-                  : "A relatively balanced field at entry."}
+                  ? "Mostly men — usually higher pay, but harder to break into."
+                  : "Pretty evenly split at the entry level."}
             </p>
           </div>
         </div>
@@ -188,9 +188,9 @@ function NegotiationArena() {
   return (
     <FeaturePanel
       index="02"
-      kicker="Branching State Engine"
-      title="The First Negotiation Arena"
-      blurb="A salary negotiation is a 40-year decision disguised as a 5-minute conversation. Make your choices — the engine compounds the consequences."
+      kicker="Play it out"
+      title="The first salary negotiation"
+      blurb="A five-minute conversation that quietly sets the next 40 years. Make your calls and watch how far each one ends up reaching."
     >
       <div className="grid lg:grid-cols-[1fr_320px] gap-6">
         {/* Dialogue */}
@@ -285,8 +285,8 @@ function NegotiationArena() {
               <p className="font-display text-lg text-foreground mb-1">
                 Opening offer: {money(NEGOTIATION_OPENING_BASE)}
               </p>
-              Your 40-year outcome will be calculated once you reach the end of the
-              conversation.
+              Play through the conversation and I'll work out where you land 40 years
+              from now.
             </div>
           )}
         </div>
@@ -354,9 +354,9 @@ function DebtDelta() {
   return (
     <FeaturePanel
       index="03"
-      kicker="Amortization Delta"
-      title="Student Debt Amortization Delta"
-      blurb="A lower entry wage means smaller payments, a longer payoff, and more interest paid — the gender pay gap quietly taxes student debt too."
+      kicker="Paying it back"
+      title="How the pay gap stretches out student debt"
+      blurb="A smaller paycheck means smaller payments, a longer payoff, and more interest by the end. The pay gap quietly taxes student loans too."
     >
       <div className="grid lg:grid-cols-[320px_1fr] gap-6">
         <div className="space-y-5">

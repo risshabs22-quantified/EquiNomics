@@ -48,9 +48,9 @@ function SovereignStressTester() {
   return (
     <FeaturePanel
       index="01"
-      kicker="Predictive · Global Benchmarking"
-      title="The Sovereign Policy Stress-Tester"
-      blurb="Import aggressive national policy frameworks onto the US model and project their compounding effect on GDP, participation, and the pay gap over 20 years."
+      kicker="Compare countries"
+      title="What if the US copied another country's policies?"
+      blurb="Pick a country's policy package — paid leave, childcare, transparency — and see what might happen to GDP, workforce participation, and the pay gap over 20 years if we imported it here."
     >
       {/* Framework selector */}
       <div className="flex items-center justify-between mb-3">
@@ -175,9 +175,9 @@ function BillTracker() {
   return (
     <FeaturePanel
       index="02"
-      kicker="Legislative Impact Predictor"
-      title="The Legislative Bill Tracker"
-      blurb="Toggle real federal legislation between Fail and Pass to instantly recalculate the projected wage gap across demographic groups — bills weighted to help the most-penalized most."
+      kicker="What if it passes?"
+      title="Legislation impact tracker"
+      blurb="Toggle real federal bills between fail and pass and watch the projected wage gap shift across different groups — weighted so the bills that help the most-penalized people move the needle most."
     >
       <div className="grid lg:grid-cols-[minmax(0,1fr)_320px] gap-6">
         {/* Bills */}

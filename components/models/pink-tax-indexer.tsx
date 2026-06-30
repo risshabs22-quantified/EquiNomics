@@ -93,7 +93,7 @@ export function PinkTaxIndexer() {
         <div className="rounded-lg border border-border bg-card p-6">
           <div className="grid sm:grid-cols-3 gap-px bg-border border border-border rounded-md overflow-hidden">
             <HeadStat
-              label="Annual Gender Inflation Premium"
+              label="Annual pink tax total"
               value={money(result.annualPremium)}
               tone="amber"
               big
@@ -113,8 +113,8 @@ export function PinkTaxIndexer() {
             </span>
             <p className="text-xs text-muted-foreground">
               — what that same premium could become if invested annually over{" "}
-              {LIFETIME_YEARS} years at {Math.round(PINK_TAX_INVEST_RATE * 100)}%. The
-              pink tax is not just a cost; it is forgone compounding.
+              {LIFETIME_YEARS} years at {Math.round(PINK_TAX_INVEST_RATE * 100)}%. It's
+              not just what you overpaid — it's what that money never got to become.
             </p>
           </div>
         </div>

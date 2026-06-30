@@ -80,9 +80,9 @@ function HiringBiasSimulator() {
   return (
     <FeaturePanel
       index="03"
-      kicker="Corporate Auditing · Simulation"
-      title="Algorithmic Hiring Bias Simulator"
-      blurb="An AI résumé screener scores identical candidates. Toggle the structural-bias parameters to watch the same qualifications get penalized — and see how a blind process closes the gap."
+      kicker="You're the hiring manager"
+      title="Hiring bias simulator"
+      blurb="An AI résumé screener scores identical candidates. Flip the bias settings and watch the same qualifications get penalized — then see what happens when you blind the process."
     >
       <div className="grid lg:grid-cols-[minmax(0,1fr)_340px] gap-6">
         {/* Controls */}
@@ -293,9 +293,9 @@ function DisparityLedger() {
   return (
     <FeaturePanel
       index="04"
-      kicker="Corporate Transparency"
-      title="Corporate Wage-Gap Disparity Ledger"
-      blurb="A searchable, sortable ledger of sector wage data. Sort by revenue, women in management, pay gap, or transparency — and compare industries at a glance."
+      kicker="Who reports what"
+      title="Corporate pay gap ledger"
+      blurb="A sortable table of wage data by industry — revenue, women in management, pay gap, transparency score. Compare sectors side by side."
     >
       {/* Toolbar */}
       <div className="flex flex-wrap items-center gap-3 mb-4">

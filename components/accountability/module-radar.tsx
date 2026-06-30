@@ -61,9 +61,9 @@ function WealthEquityRadar() {
   return (
     <FeaturePanel
       index="05"
-      kicker="Intersectional · Futures"
-      title="The Compounding Wealth Equity Radar"
-      blurb="Five vectors of economic opportunity. Overlay demographic profiles to see the geometric shrinkage where identities — and their penalties — intersect."
+      kicker="Where gaps overlap"
+      title="Wealth equity radar"
+      blurb="Five axes of economic opportunity. Layer on different demographic profiles and watch the shape shrink where penalties stack on top of each other."
     >
       <div className="flex flex-wrap gap-2 mb-5">
         {RADAR_PROFILES.map((p) => {
@@ -161,9 +161,9 @@ function DeficitClock() {
   return (
     <FeaturePanel
       index="06"
-      kicker="Live · Futures Forecasting"
-      title="The Generational Wealth Deficit Clock"
-      blurb="A running estimate of the unpaid generational wealth deficit borne by women worldwide this year — compounding asset-appreciation gaps, by the millisecond."
+      kicker="Running total"
+      title="Generational wealth deficit clock"
+      blurb="A live counter estimating the unpaid wealth gap borne by women worldwide this year — the savings that never accumulated because of pay and asset gaps, ticking up in real time."
     >
       <div className="rounded-lg border border-border bg-secondary/30 p-5 sm:p-8 text-center">
         <div className="eyebrow mb-3">Accrued deficit · {new Date().getFullYear()} to date</div>

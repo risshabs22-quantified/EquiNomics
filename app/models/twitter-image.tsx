@@ -7,9 +7,9 @@ export const contentType = OG_CONTENT_TYPE
 
 export default function Image() {
   return createOgImage({
-    kicker: "The Instruments",
-    line1: "Don't read the data.",
-    line2: "Interrogate it.",
-    subtitle: "Interactive econometric models — policy simulator, shadow-economy invoice, intersectional matrix, pink-tax indexer.",
+    kicker: "Interactive tools",
+    line1: "Don't just read",
+    line2: "the data.",
+    subtitle: "Policy simulator, care-work invoice, intersectional pay chart, pink tax calculator.",
   })
 }

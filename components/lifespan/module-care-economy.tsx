@@ -26,9 +26,9 @@ export function ModuleCareEconomy() {
       <TimeUseTracker />
       <FeaturePanel
         index="05"
-        kicker="The Care Economy, Invoiced"
+        kicker="Send society a bill"
         title="The Shadow GDP Invoice Generator"
-        blurb="Convert your unpaid hours into localized market-rate wages and issue a formal, downloadable invoice — to society itself."
+        blurb="Take your unpaid hours, price them at what they'd actually cost on the market, and print a real invoice — addressed to society."
       >
         <ShadowEconomy />
       </FeaturePanel>
@@ -102,9 +102,9 @@ function TimeUseTracker() {
   return (
     <FeaturePanel
       index="04"
-      kicker="Daily Allocation"
-      title="Time-Use Disparity Tracker"
-      blurb="Log a typical day. The 'second shift' — domestic labor, childcare, and the invisible cognitive load — is work that no paycheck records."
+      kicker="A day in hours"
+      title="Where the day actually goes"
+      blurb="Log a normal day. That 'second shift' — housework, childcare, and the invisible job of keeping track of everything — is real work that no paycheck ever counts."
     >
       <div className="grid lg:grid-cols-[320px_1fr] gap-6">
         <div className="space-y-5">
@@ -203,9 +203,9 @@ function MotherhoodProjector() {
   return (
     <FeaturePanel
       index="06"
-      kicker="Earnings Velocity"
+      kicker="After kids"
       title="The Motherhood Penalty Projector"
-      blurb="Children bend two trajectories in opposite directions: mothers absorb a wage penalty while fathers often receive a premium. Watch the divergence."
+      blurb="Having kids pushes two careers in opposite directions — mothers usually take a pay hit while fathers often get a bump. Watch the two lines split apart."
     >
       <div className="grid lg:grid-cols-[320px_1fr] gap-6">
         <div className="space-y-5">

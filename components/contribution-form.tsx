@@ -121,7 +121,7 @@ export function ContributionForm() {
   function validate(): boolean {
     const e: Record<string, string> = {}
     if (form.pseudonym.trim().length < 2) e.pseudonym = "Add a pseudonym (≥ 2 chars)."
-    if (form.headline.trim().length < 8) e.headline = "Give your data point a headline (≥ 8 chars)."
+    if (form.headline.trim().length < 8) e.headline = "Give your story a headline (≥ 8 chars)."
     if (!form.sector) e.sector = "Select an economic sector."
     if (form.phenomena.length === 0) e.phenomena = "Tag at least one economic phenomenon."
     if (!form.region.trim()) e.region = "Add a region."
@@ -185,7 +185,7 @@ export function ContributionForm() {
 
     saveContribution(study)
     setSubmitted(study)
-    toast.success("Your data point has been added to the archive.")
+    toast.success("Your story is in the archive now.")
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
@@ -195,11 +195,11 @@ export function ContributionForm() {
       <div className="mx-auto max-w-2xl px-5 py-20 text-center">
         <CheckCircle2 className="mx-auto h-14 w-14 text-chart-5" />
         <h1 className="mt-6 font-serif text-3xl font-semibold">
-          Thank you — your data point is live.
+          Thank you — your story is live.
         </h1>
         <p className="mt-3 text-muted-foreground">
-          Your experience now sits alongside the macro indicators in the EquiNomics
-          archive, annotated with the economic theory that frames it.
+          It's in the archive now, tagged with the economic concepts that fit what
+          you described.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <Link
@@ -222,7 +222,7 @@ export function ContributionForm() {
           }}
           className="mt-6 text-sm text-muted-foreground underline hover:text-foreground"
         >
-          Submit another data point
+          Submit another story
         </button>
       </div>
     )
@@ -231,16 +231,15 @@ export function ContributionForm() {
   return (
     <div className="mx-auto max-w-7xl px-5 lg:px-10 py-10">
       <div className="max-w-2xl mb-10">
-        <p className="eyebrow mb-2">Data Contribution Portal</p>
+        <p className="eyebrow mb-2">Share your story</p>
         <h1 className="font-serif text-3xl md:text-4xl font-semibold">
-          Submit your experience as economic data
+          Tell us what happened — in your own words
         </h1>
         <p className="mt-3 text-muted-foreground leading-relaxed">
-          Your narrative becomes a structured, anonymized data point in the archive —
-          categorized by industry, experience, opportunity cost, and the structural
-          barriers you faced. Read our{" "}
+          Your story goes into the archive anonymously, sorted by industry, career
+          stage, what it cost you, and what got in the way. Read the{" "}
           <Link href="/ethics" className="text-primary hover:underline">
-            data ethics & consent protocol
+            data ethics & consent page
           </Link>{" "}
           first.
         </p>
@@ -269,7 +268,7 @@ export function ContributionForm() {
           </Section>
 
           <Section title="02 · Economic classification">
-            <Field id="field-headline" label="Headline for your data point" error={errors.headline}>
+            <Field id="field-headline" label="Headline for your story" error={errors.headline}>
               <input
                 className={inputCls(!!errors.headline)}
                 placeholder="e.g. The engineer who was a 'culture fit' problem"
@@ -483,7 +482,7 @@ export function ContributionForm() {
                   ))
                 ) : (
                   <span className="text-xs text-muted-foreground/60">
-                    Tag phenomena to classify your data point
+                    Tag what happened to you
                   </span>
                 )}
               </div>
@@ -505,9 +504,9 @@ export function ContributionForm() {
 
             {form.phenomena.length > 0 && (
               <div className="rounded-lg border border-border bg-card p-4">
-                <h4 className="eyebrow mb-2">Auto-framed theory</h4>
+                <h4 className="eyebrow mb-2">Economics that fit your story</h4>
                 <p className="text-xs text-muted-foreground">
-                  Your tags will attach these economic concepts to your story:
+                  Based on your tags, these concepts will show up next to your story:
                 </p>
                 <ul className="mt-2 space-y-1.5">
                   {[...new Set(form.phenomena.map((p) => PHENOMENON_CONCEPT[p]))].map(

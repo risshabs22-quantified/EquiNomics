@@ -51,8 +51,9 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs text-pretty">
-              A narrative economics platform examining gender economic inequality
-              where macro data meets lived experience.
+              I built this because the headline stats never matched what I was
+              reading about people's actual careers. Charts on one side, stories on
+              the other.
             </p>
           </div>
 
@@ -76,8 +77,8 @@ export function SiteFooter() {
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} EquiNomics Research Collective. An academic
-            project for education and research.
+            © {new Date().getFullYear()} EquiNomics. A student project for
+            education and research.
           </p>
           <p className="text-xs text-muted-foreground font-mono">
             Macro figures are illustrative, drawn from public datasets — see{" "}

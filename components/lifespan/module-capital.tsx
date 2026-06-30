@@ -26,9 +26,9 @@ export function ModuleCapital() {
       <VCAllocator />
       <FeaturePanel
         index="09"
-        kicker="Dynamic Regression"
-        title="Intersectional Regression Matrix"
-        blurb="Cross gender with race, education, and geography to expose the compounding penalties that single-axis averages conceal."
+        kicker="Stack the factors"
+        title="Where the penalties stack up"
+        blurb="Cross gender with race, education, and where someone lives. The penalties stack on top of each other, and a single headline average hides that completely."
       >
         <IntersectionalExaminer />
       </FeaturePanel>
@@ -97,9 +97,9 @@ function GlassCeilingSim() {
   return (
     <FeaturePanel
       index="07"
-      kicker="Live Simulation"
-      title="Glass Ceiling Velocity Simulator"
-      blurb="Two identical hires start on the same day. Press play and watch how fast each climbs the Fortune 500 ladder — sector by sector."
+      kicker="Press play"
+      title="How fast each one climbs"
+      blurb="Two identical hires start the same day. Hit play and watch how fast each one moves up the ladder — switch the sector and the gap changes with it."
     >
       <div className="flex flex-wrap items-center gap-3 mb-6">
         <select
@@ -257,9 +257,9 @@ function VCAllocator() {
   return (
     <FeaturePanel
       index="08"
-      kicker="Bias Exposure · Micro-Game"
+      kicker="You're the investor"
       title="Venture Capital Allocator Game"
-      blurb="You're the investor. Each pair of founders has identical fundamentals — only the team differs. Allocate your $10M fund, then see how the real market would have."
+      blurb="You're the investor. Every pair of founders has the exact same numbers — the only thing that's different is the team. Split your $10M, then see how the real market would have."
     >
       <div className="space-y-5">
         {VC_ROUNDS.map((round, i) => (
@@ -346,10 +346,10 @@ function VCAllocator() {
               <StatCell label="Capital you'd redirect" value={compactMoney(result.gapClosed)} sub="vs. the market baseline" tone="academic" />
             </StatGrid>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-              The fundamentals were <strong>identical</strong> in every pairing — only the
-              founders' demographics differed. All-women teams receive roughly{" "}
+              The numbers were identical in every single pairing — the only thing that
+              changed was who was pitching. All-women teams get about{" "}
               <span className="text-amber font-semibold">2%</span> of U.S. venture dollars.
-              The gap is not a pipeline problem; it is an allocation choice.
+              That isn't a pipeline problem. It's a choice about where the money goes.
             </p>
           </div>
         )}

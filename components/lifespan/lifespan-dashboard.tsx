@@ -26,7 +26,7 @@ const TABS = [
   {
     id: "care",
     stage: "Ages 28–45",
-    label: "Care Economy & Domestic Arbitrage",
+    label: "The Care Economy & Unpaid Work",
     short: "Care Economy",
     icon: HeartHandshake,
     Component: ModuleCareEconomy,
@@ -34,7 +34,7 @@ const TABS = [
   {
     id: "capital",
     stage: "Ages 35–55",
-    label: "Capital Systems & Corporate Velocity",
+    label: "Capital, Promotions & the Ceiling",
     short: "Capital Systems",
     icon: Building2,
     Component: ModuleCapital,
@@ -42,7 +42,7 @@ const TABS = [
   {
     id: "micro",
     stage: "All ages",
-    label: "The Micro-Intervention Toolbelt",
+    label: "Small Things That Actually Help",
     short: "Interventions",
     icon: Wrench,
     Component: ModuleMicro,
@@ -91,15 +91,15 @@ export function LifespanDashboard() {
           <span className="text-primary italic">chasm</span> — one life stage at a time.
         </h1>
         <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed text-pretty">
-          Twelve interactive instruments trace how gender economic disparities
-          originate in early adulthood and compound — through caregiving years,
-          corporate ladders, and capital systems — all the way to retirement.
+          Twelve tools you can actually play with, each one following the gap through
+          a different part of life — the first job, the caregiving years, the climb at
+          work, and all the small things that add up in between.
         </p>
         <a
           href="/methodology#instruments"
           className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
         >
-          How each instrument is calculated →
+          How I calculated each one →
         </a>
       </header>
 

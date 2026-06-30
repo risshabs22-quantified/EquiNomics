@@ -168,7 +168,7 @@ const GROUPS: Group[] = [
         index: "11",
         name: "Pink Tax Micro-Audit Indexer",
         summary:
-          "Converts category spending into an annual 'Gender Inflation Premium' and projects forgone investment growth.",
+          "Adds up category spending with documented markups and shows what the pink tax costs per year — plus what you'd have if you invested it instead.",
         formula:
           "premiumᵢ = annualSpendᵢ · markupᵢ/(1+markupᵢ);  invested = premium · ((1+r)ᴺ − 1)/r, r = 6%, N = 50.",
         inputs: "Monthly spend per category.",
@@ -193,9 +193,9 @@ const GROUPS: Group[] = [
     specs: [
       {
         index: "P",
-        name: "Econometric Policy Simulator",
+        name: "Policy Simulator",
         summary:
-          "Projects the national gender wage gap over 10 years as a function of four policy levers.",
+          "Projects the national gender wage gap over 10 years based on four policy levers.",
         formula:
           "gapₜ = max(floor, base − Σeffectᵢ · (1 − e^(−t/τ)));  leave follows an inverted-U peaking ≈28 weeks; τ ≈ 3.2 yrs, base 16pp, floor 2.5pp.",
         inputs: "Paid leave (weeks), wage transparency, subsidized childcare, flexible-work coverage.",

@@ -41,13 +41,12 @@ const merriweather = Merriweather({
 export const metadata: Metadata = {
   metadataBase: new URL("https://equinomics.vercel.app"),
   title: {
-    default: "EquiNomics — A Narrative Economics of Gender Inequality",
+    default: "EquiNomics — The Economics of Gender Inequality",
     template: "%s | EquiNomics",
   },
   description:
-    "EquiNomics intersects rigorous labor economics with qualitative human case studies to examine gender economic inequality — occupational segregation, the motherhood penalty, the care economy, and the gender wealth gap.",
+    "A high school economics project that pairs labor-market data with real people's stories — pay gaps, unpaid care, the motherhood penalty, and why the numbers keep getting worse over a lifetime.",
   keywords: [
-    "narrative economics",
     "gender pay gap",
     "occupational segregation",
     "motherhood penalty",
@@ -55,20 +54,20 @@ export const metadata: Metadata = {
     "labor economics",
     "human capital",
   ],
-  authors: [{ name: "EquiNomics Research Collective" }],
+  authors: [{ name: "EquiNomics" }],
   openGraph: {
-    title: "EquiNomics — A Narrative Economics of Gender Inequality",
+    title: "EquiNomics — The Economics of Gender Inequality",
     description:
-      "Where macroeconomic data meets lived experience. A research platform on the economics of gender inequality.",
+      "Charts, models, and real stories about why a small pay gap at 22 can turn into a huge one by 65.",
     type: "website",
     siteName: "EquiNomics",
     url: "https://equinomics.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
-    title: "EquiNomics — A Narrative Economics of Gender Inequality",
+    title: "EquiNomics — The Economics of Gender Inequality",
     description:
-      "Where macroeconomic data meets lived experience. A research platform on the economics of gender inequality.",
+      "Charts, models, and real stories about why a small pay gap at 22 can turn into a huge one by 65.",
   },
 }
 

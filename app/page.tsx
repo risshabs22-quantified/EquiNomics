@@ -271,8 +271,8 @@ export default function DashboardPage() {
               The people behind the numbers
             </h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Every story here is one data point, with the economics that explains it
-              written right next to it. New ones show up as people add their own.
+              Every story here comes with the economics written right next to it.
+              New ones show up when people submit their own.
             </p>
           </div>
           <LiveCasePanel />

@@ -30,9 +30,9 @@ export function ModuleMicro() {
       <ScriptBuilder />
       <FeaturePanel
         index="11"
-        kicker="Consumer Price Discrimination"
+        kicker="The pink tax"
         title="The Pink Tax Micro-Audit Indexer"
-        blurb="Audit your everyday spending against documented gendered markups to surface your personal annual 'pink tax' loss — and what it could have compounded to."
+        blurb="Run your everyday spending against the markups that get tacked onto products aimed at women, and see what that 'pink tax' costs you in a year — and what it could've grown into instead."
       >
         <PinkTaxIndexer />
       </FeaturePanel>
@@ -115,9 +115,9 @@ function ScriptBuilder() {
   return (
     <FeaturePanel
       index="10"
-      kicker="Actionable Utility"
-      title="Automated Pay-Equity Script Builder"
-      blurb="Turn your numbers into a tailored, legally-grounded script for requesting a wage audit — ready to copy and send."
+      kicker="Actually ask"
+      title="Pay-Equity Script Builder"
+      blurb="Drop in your numbers and get a ready-to-send script for asking about your pay, grounded in the actual law. Copy it and go."
     >
       <div className="grid lg:grid-cols-[320px_1fr] gap-6">
         <div className="space-y-4">
@@ -205,9 +205,9 @@ function WealthGapEngine() {
   return (
     <FeaturePanel
       index="12"
-      kicker="Closing the Wealth Gap"
+      kicker="Catching up"
       title="Wealth Gap Mitigation Engine"
-      blurb="The wage gap becomes a wealth gap through lower lifetime savings. This engine computes exactly how much more you'd need to invest monthly to close it by 65."
+      blurb="A gap in pay turns into a gap in savings, and then a gap in wealth. This works out exactly how much more you'd have to put away each month to catch up by 65."
     >
       <div className="grid lg:grid-cols-[320px_1fr] gap-6">
         <div className="space-y-5">

@@ -6,7 +6,7 @@ import { GLOSSARY, MACRO_INDICATORS } from "@/lib/data"
 export const metadata: Metadata = {
   title: "Methodology & Sources",
   description:
-    "How EquiNomics sources its macroeconomic indicators and structures qualitative case studies, plus a glossary of the economic concepts used throughout.",
+    "Where the dashboard numbers come from, how the interactive models work, and the economic concepts used in the case studies.",
 }
 
 export default function MethodologyPage() {
@@ -14,7 +14,7 @@ export default function MethodologyPage() {
     <DocPage
       eyebrow="Methodology"
       title="How we read the data — and the people in it"
-      intro="EquiNomics is a mixed-methods research platform. It pairs quantitative labor-economics indicators with qualitative case studies, treating each as a distinct but complementary form of evidence."
+      intro="This page is where I explain my sources, how the models work, and what the economic terms in the archive actually mean."
       updated="June 2026"
     >
       <H2>Quantitative indicators</H2>
@@ -73,29 +73,25 @@ export default function MethodologyPage() {
         </table>
       </div>
 
-      <H2 id="instruments">Interactive instruments — algorithms</H2>
+      <H2 id="instruments">How the interactive tools work</H2>
       <P>
-        Every interactive model on EquiNomics is driven by a transparent, documented
-        algorithm — move an input and the output recomputes deterministically. The
-        coefficients below are illustrative and directionally calibrated to the
-        labor-economics literature; they are not official statistics, and the models
-        are pedagogical instruments rather than forecasting tools.
+        Every model on this site runs on math you can read. Move an input and the
+        output recalculates — no black box. The coefficients are rounded and meant
+        to show direction, not predict the future. They're teaching tools, not
+        forecasts.
       </P>
       <InstrumentMethodology />
 
-      <H2>Qualitative case studies</H2>
+      <H2>Case studies in the archive</H2>
       <P>
-        Each case study is treated as a qualitative data point. Contributors submit
-        their experience through a structured intake that captures economic sector,
-        years of experience, demographic indicators, self-estimated opportunity
-        cost, and the structural barriers they faced. Submissions are anonymized by
-        the contributor before publication.
+        Each story in the archive comes from a form: industry, years of experience,
+        what happened, estimated cost, and the barriers someone ran into. People
+        choose a pseudonym and strip out identifying details before submitting.
       </P>
       <P>
-        Every narrative is then <em>annotated</em>: specific phrases are linked to
-        the established economic concepts that help explain them. This is the core
-        method of narrative economics — using theory to interpret lived experience,
-        and lived experience to stress-test theory.
+        I tag specific phrases in each narrative with economic concepts — the same
+        ones in the glossary below. The idea is simple: here's what happened to
+        someone, and here's the econ that helps explain it.
       </P>
       <UL>
         <LI>

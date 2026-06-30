@@ -63,15 +63,15 @@ export function AccountabilityDashboard() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-10 py-8 lg:py-12">
       <header className="mb-8">
-        <p className="eyebrow mb-3">The Systemic &amp; Institutional Accountability Matrix</p>
+        <p className="eyebrow mb-3">Institutional accountability</p>
         <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.03] tracking-tight text-balance">
           Stop measuring the gap.{" "}
-          <span className="text-primary italic">Audit the system</span> that makes it.
+          <span className="text-primary italic">Look at what makes it.</span>
         </h1>
         <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed text-pretty">
-          Six instruments that turn the lens from individuals to institutions:
-          stress-test national policy, predict legislation, audit algorithmic hiring,
-          benchmark corporate disclosure, and forecast intersectional wealth equity.
+          Six tools that shift the focus from individuals to the systems around them
+          — what countries do on policy, what companies disclose, what hiring
+          algorithms penalize, and where wealth gaps pile up when identities overlap.
         </p>
       </header>
 

@@ -153,7 +153,7 @@ export function IntersectionalExaminer() {
         {/* Compounding readout */}
         <div className="space-y-4">
           <div className="rounded-lg border border-border bg-card p-5">
-            <h4 className="eyebrow mb-2">Sharpest compounding penalty</h4>
+            <h4 className="eyebrow mb-2">Where the gap hits hardest</h4>
             <p className="font-display text-2xl font-bold leading-tight">
               {worst.category} women
             </p>
@@ -161,8 +161,8 @@ export function IntersectionalExaminer() {
               {worst.cents}¢
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              earned per $1.00 of {refLabel.toLowerCase()} — the intersection of two
-              penalties, not their sum.
+              earned per $1.00 of {refLabel.toLowerCase()} — two penalties stacked
+              together, not added up.
             </p>
           </div>
 

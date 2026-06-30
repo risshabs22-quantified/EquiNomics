@@ -5,65 +5,64 @@ import { DocPage, H2, P } from "@/components/doc-page"
 export const metadata: Metadata = {
   title: "About",
   description:
-    "EquiNomics is an academic platform examining gender economic inequality through the lens of narrative economics.",
+    "Why I built EquiNomics — a high school economics project about gender inequality, real stories, and the numbers behind them.",
 }
 
 export default function AboutPage() {
   return (
     <DocPage
       eyebrow="About"
-      title="A narrative economics of gender inequality"
-      intro="EquiNomics exists to close the distance between the aggregate and the individual — between a statistic about the gender pay gap and the person whose career it quietly reshaped."
+      title="Why I built this"
+      intro="I kept reading that the gender pay gap is 16%, and I kept thinking — okay, but what does that actually do to someone's life over forty years? EquiNomics is my attempt to answer that."
     >
       <H2>The thesis</H2>
       <P>
-        Economist Robert Shiller coined &ldquo;narrative economics&rdquo; to describe
-        how stories drive economic outcomes. We borrow the frame and invert it:
-        rather than asking how narratives move markets, we ask what the market's
-        movements feel like from inside a single life. A 16% pay gap is a number. The
-        pediatrician who priced her own flexibility is a mechanism — and the two
-        explain each other.
+        Economist Robert Shiller wrote about how stories move markets. I'm doing
+        something simpler: starting from the stories and working backward to the
+        economics. A 16% pay gap is a number. The pediatrician who took a lower
+        salary for flexibility is a mechanism — and the two explain each other.
       </P>
 
-      <H2>What this platform does</H2>
+      <H2>What this site does</H2>
       <P>
-        It holds two kinds of evidence side by side. The{" "}
+        It holds two things side by side. The{" "}
         <Link href="/" className="text-primary hover:underline">
           Macro Dashboard
         </Link>{" "}
-        presents quantitative labor-economics indicators with their sources. The{" "}
+        has the labor-market numbers with their sources. The{" "}
         <Link href="/archive" className="text-primary hover:underline">
           Case Study Archive
         </Link>{" "}
-        treats lived experiences as structured qualitative data — each annotated
-        with the economic theory that frames it. Anyone can{" "}
+        has real people's experiences, each tagged with the economic concept that
+        helps explain what happened. Anyone can{" "}
         <Link href="/contribute" className="text-primary hover:underline">
-          contribute a data point
+          add their own story
         </Link>
-        , adding to the archive in real time.
+        , and it shows up in the archive right away.
       </P>
 
-      <H2>Who it is for</H2>
+      <H2>Who it's for</H2>
       <P>
-        Students and researchers in labor economics and gender studies; journalists
-        seeking grounded human context for the data; and anyone who has felt a gap
-        between what the headline statistics describe and what they have lived.
+        Other students who've taken econ and want to see the theory connect to
+        something real. Teachers looking for a project that mixes data and narrative.
+        Anyone who's looked at a headline stat and thought, that doesn't sound like
+        what I've seen happen to people I know.
       </P>
 
-      <H2>A note on rigor and humility</H2>
+      <H2>What I'm not claiming</H2>
       <P>
-        We take the economics seriously and the people more seriously still. Figures
-        are labeled, simplified, and sourced; narratives are anonymized and treated
-        with care. This is a passion project built to provoke better questions, not
-        to issue final answers. Read our{" "}
+        I take the economics seriously and the people more seriously still. The
+        numbers are rounded and sourced; the stories are anonymized. This is a
+        student project meant to ask better questions, not to settle anything. Read
+        the{" "}
         <Link href="/methodology" className="text-primary hover:underline">
           methodology
         </Link>{" "}
         and{" "}
         <Link href="/ethics" className="text-primary hover:underline">
-          data ethics protocol
+          ethics page
         </Link>{" "}
-        to see exactly how.
+        if you want to see exactly how it works.
       </P>
     </DocPage>
   )

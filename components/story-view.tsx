@@ -97,7 +97,7 @@ export function StoryView({
       <div className="mx-auto max-w-3xl px-5 lg:px-10 py-24 text-center">
         <h1 className="font-serif text-3xl font-semibold">Case study not found</h1>
         <p className="mt-3 text-muted-foreground">
-          This data point may have been a local contribution on another device.
+          This story may have been submitted on another device — contributions stay in your browser.
         </p>
         <Link
           href="/archive"
@@ -160,7 +160,7 @@ export function StoryView({
         <div className="min-w-0">
           <div className="flex items-center gap-2 mb-6 pb-3 border-b border-border">
             <Quote className="h-4 w-4 text-primary" />
-            <h2 className="eyebrow">The Narrative</h2>
+            <h2 className="eyebrow">The story</h2>
           </div>
           <div className="max-w-prose">
             {study.narrative.map((para, i) => (
@@ -183,7 +183,7 @@ export function StoryView({
 
           {related.length > 0 && (
             <div className="mt-12">
-              <h3 className="eyebrow mb-4">Related Data Points</h3>
+              <h3 className="eyebrow mb-4">Similar stories</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {related.map((r) => (
                   <Link
@@ -291,7 +291,7 @@ export function StoryView({
               href="/contribute"
               className="block rounded-lg border border-primary/40 bg-primary/10 p-4 text-center text-sm font-medium hover:bg-primary/15 transition-colors"
             >
-              Add your own data point →
+              Add your own story →
             </Link>
           </div>
         </aside>

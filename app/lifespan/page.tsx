@@ -4,7 +4,7 @@ import { LifespanDashboard } from "@/components/lifespan/lifespan-dashboard"
 export const metadata: Metadata = {
   title: "The Macroeconomic Lifespan Trajectory Model",
   description:
-    "An interactive framework tracking how gender economic disparities compound from early adulthood to retirement — twelve state-driven instruments across four life-stage modules.",
+    "Twelve interactive tools that follow gender economic inequality from your first job to retirement — one life stage at a time.",
 }
 
 export default function LifespanPage() {

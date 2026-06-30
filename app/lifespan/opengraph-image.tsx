@@ -7,9 +7,9 @@ export const contentType = OG_CONTENT_TYPE
 
 export default function Image() {
   return createOgImage({
-    kicker: "The Macroeconomic Lifespan Trajectory Model",
+    kicker: "Lifespan trajectory model",
     line1: "How a gap becomes",
     line2: "a chasm.",
-    subtitle: "Twelve interactive instruments tracing gender economic disparity from first job to retirement.",
+    subtitle: "Twelve tools you can play with — from your first salary to retirement savings.",
   })
 }

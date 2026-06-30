@@ -7,9 +7,9 @@ export const contentType = OG_CONTENT_TYPE
 
 export default function Image() {
   return createOgImage({
-    kicker: "Case Study Archive · Relational Database",
-    line1: "Lived experience,",
-    line2: "indexed as data.",
-    subtitle: "Filter qualitative case studies by sector, phenomenon, and demographic — and correlate each to its macro statistic.",
+    kicker: "Case Study Archive",
+    line1: "Real stories,",
+    line2: "tagged with the economics.",
+    subtitle: "Filter by industry and what happened — then see the macro stat that goes with each story.",
   })
 }

@@ -17,9 +17,9 @@ export default async function Image({
   if (!study) {
     return createOgImage({
       kicker: "Case Study Archive",
-      line1: "A qualitative",
-      line2: "data point.",
-      subtitle: "Lived experience, annotated with the economics that explains it — EquiNomics.",
+      line1: "A story",
+      line2: "from the archive.",
+      subtitle: "Real experience, with the economics that explains it — EquiNomics.",
     })
   }
 

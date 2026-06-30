@@ -104,13 +104,13 @@ export function TrajectoryOverview() {
   return (
     <div className="rounded-xl border border-border bg-card overflow-hidden">
       <div className="p-5 sm:p-6 border-b border-border">
-        <p className="eyebrow mb-2">The Thesis · Cumulative Lifetime Earnings</p>
+        <p className="eyebrow mb-2">The whole argument, in one chart</p>
         <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight">
           One gap doesn't close. It compounds — for 43 years.
         </h2>
         <p className="mt-2 text-sm text-muted-foreground max-w-2xl leading-relaxed">
-          Toggle the life events below to watch how small early divergences accumulate
-          across an entire working life, from the first job to retirement.
+          Flip these life events on and off and watch how a small difference early on
+          piles up over a whole career, from the first job all the way to retirement.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {TOGGLES.map((t) => (

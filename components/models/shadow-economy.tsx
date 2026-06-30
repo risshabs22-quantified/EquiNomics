@@ -83,7 +83,7 @@ function buildInvoiceSVG(
   <text x="376" y="${totalsY + 22}" font-family="Arial, sans-serif" font-size="11" fill="#C9D4E8">ANNUAL AMOUNT DUE</text>
   <text x="604" y="${totalsY + 38}" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="end">${money(total)}</text>
 
-  <text x="40" y="${height - 38}" font-family="Georgia, serif" font-style="italic" font-size="11" fill="${PALETTE.muted}">This labor sustains the formal economy yet appears in no ledger. Terms: payable in recognition, policy, and redistribution.</text>
+  <text x="40" y="${height - 38}" font-family="Georgia, serif" font-style="italic" font-size="11" fill="${PALETTE.muted}">This work keeps everything else running, but it never shows up on anyone's paycheck.</text>
   <text x="40" y="${height - 20}" font-family="Arial, sans-serif" font-size="10" fill="${PALETTE.amber}">equinomics · figures are illustrative replacement-wage estimates</text>
 </svg>`
 }

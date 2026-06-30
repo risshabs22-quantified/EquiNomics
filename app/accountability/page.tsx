@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import { AccountabilityDashboard } from "@/components/accountability/accountability-dashboard"
 
 export const metadata: Metadata = {
-  title: "The Systemic & Institutional Accountability Matrix",
+  title: "Accountability Matrix",
   description:
-    "Stress-test national policy frameworks, predict legislative impact, audit algorithmic hiring bias, benchmark corporate wage disclosure, and forecast intersectional wealth equity.",
+    "Six tools that look at institutions instead of individuals — national policy, hiring algorithms, corporate pay gaps, and where wealth gaps stack up.",
 }
 
 export default function AccountabilityPage() {

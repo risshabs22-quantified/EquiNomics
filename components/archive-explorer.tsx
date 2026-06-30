@@ -135,7 +135,7 @@ export function ArchiveExplorer() {
           </FilterChip>
         ))}
       </FilterGroup>
-      <FilterGroup title="Economic Phenomenon · click to correlate">
+      <FilterGroup title="What happened · click to see the matching stat">
         {PHENOMENA.map((p) => (
           <FilterChip
             key={p}
@@ -165,15 +165,15 @@ export function ArchiveExplorer() {
   return (
     <div className="mx-auto max-w-7xl px-5 lg:px-10 py-10">
       <header className="border-b border-border pb-8 mb-8">
-        <p className="eyebrow mb-3">Case Study Archive · Relational Database</p>
+        <p className="eyebrow mb-3">Case Study Archive</p>
         <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
-          Lived experience, indexed as data
+          Real stories, tagged with the economics
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl text-pretty">
-          Each entry is a qualitative data point. Filter by sector, phenomenon, and
-          demographic — and click any{" "}
-          <span className="font-mono text-sm text-primary">#phenomenon</span> to surface
-          the macro statistic it correlates with.
+          Each entry is someone's experience — filtered by sector, what happened to
+          them, and where they are in their career. Click any{" "}
+          <span className="font-mono text-sm text-primary">#phenomenon</span> tag to
+          pull up the macro stat that matches.
         </p>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 divide-x divide-border border border-border rounded-lg overflow-hidden">
           {[
@@ -285,7 +285,7 @@ export function ArchiveExplorer() {
               <div className="flex items-center gap-2 px-4 py-2.5 border-b border-primary/20 bg-primary/[0.06]">
                 <Activity className="h-4 w-4 text-primary" />
                 <span className="eyebrow text-primary/90">
-                  Correlated Macro Signal · {PHENOMENON_LABEL[focusTag]}
+                  Matching macro stat · {PHENOMENON_LABEL[focusTag]}
                 </span>
                 <button
                   onClick={() => setFocusTag(null)}
@@ -316,8 +316,8 @@ export function ArchiveExplorer() {
                   <span className="text-foreground font-semibold tabular-nums">
                     {focusMatchCount}
                   </span>{" "}
-                  case {focusMatchCount === 1 ? "study corroborates" : "studies corroborate"}{" "}
-                  this signal in the archive — the macro number, lived.
+                  case {focusMatchCount === 1 ? "study lines up with" : "studies line up with"}{" "}
+                  this signal in the archive — the number on the dashboard, in someone's actual life.
                 </p>
               </div>
             </div>
@@ -325,7 +325,7 @@ export function ArchiveExplorer() {
 
           {filtered.length === 0 ? (
             <div className="rounded-lg border border-dashed border-border p-12 text-center">
-              <p className="font-display text-xl">No matching data points.</p>
+              <p className="font-display text-xl">No matching stories.</p>
               <p className="text-sm text-muted-foreground mt-1">
                 Broaden your filters or{" "}
                 <button onClick={clearAll} className="underline">

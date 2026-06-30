@@ -5,7 +5,7 @@ import { ArchiveExplorer } from "@/components/archive-explorer"
 export const metadata: Metadata = {
   title: "Case Study Archive",
   description:
-    "A structured database of qualitative case studies on gender economic inequality, filterable by sector, economic phenomenon, and demographic indicators.",
+    "Real people's stories about gender inequality at work — filter by industry, what happened, and career stage. Each one is tagged with the economics that explains it.",
 }
 
 export default function ArchivePage() {

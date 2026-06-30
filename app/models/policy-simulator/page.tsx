@@ -3,25 +3,25 @@ import { ModelShell } from "@/components/models/model-shell"
 import { PolicySimulator } from "@/components/models/policy-simulator"
 
 export const metadata: Metadata = {
-  title: "Econometric Policy Simulator",
+  title: "Policy Simulator",
   description:
-    "Adjust paid leave, wage transparency, subsidized childcare, and flexible-work policy levers to simulate the projected reduction in the gender wage gap over ten years.",
+    "Move sliders for paid leave, pay transparency, childcare, and flexible work — and see how the projected national wage gap might change over ten years.",
 }
 
 export default function PolicySimulatorPage() {
   return (
     <ModelShell
       index="01"
-      kicker="Predictive Modeling"
-      title="Econometric Policy Simulator"
-      lede="Pull the levers of policy and watch the projected national gender wage gap respond over a ten-year horizon. The model decomposes each lever's long-run contribution — including the inverted-U where overly long parental leave begins to backfire."
+      kicker="Run the policy"
+      title="Policy Simulator"
+      lede="Pull the policy levers and watch the projected national wage gap move over the next ten years. Each slider has its own effect — including the weird part where really long parental leave can actually backfire."
     >
       <PolicySimulator />
       <p className="mt-6 max-w-3xl text-xs text-muted-foreground leading-relaxed">
-        Methodology: each lever contributes a long-run percentage-point reduction,
-        realized gradually via an adoption curve (1 − e^(−t/τ), τ ≈ 3.2 yrs), bounded
-        by a structural residual the levers cannot erase. Coefficients are illustrative
-        and calibrated to be directionally faithful to the labor-economics literature.
+        How it works: each lever chips away at the gap over time using a simple
+        adoption curve. The numbers are rounded and meant to show direction, not
+        predict the future — I calibrated them against what the labor-economics
+        papers generally find.
       </p>
     </ModelShell>
   )

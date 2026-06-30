@@ -12,8 +12,8 @@ export default function EthicsPage() {
   return (
     <DocPage
       eyebrow="Data Ethics & Consent"
-      title="The dignity of the data point comes first"
-      intro="Every case study is a person who trusted us with something difficult. This protocol governs how we collect, frame, and steward that trust."
+      title="The person comes first"
+      intro="Every story in the archive is from someone who trusted this project with something hard. This page is how I handle that."
       updated="June 2026"
     >
       <H2>Informed consent</H2>
@@ -80,8 +80,7 @@ export default function EthicsPage() {
       </UL>
 
       <P>
-        Questions about this protocol can be directed to the EquiNomics Research
-        Collective. See also our{" "}
+        Questions about this page can go to the EquiNomics project. See also our{" "}
         <Link href="/privacy" className="text-primary hover:underline">
           Privacy Policy
         </Link>{" "}

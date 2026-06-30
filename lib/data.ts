@@ -92,7 +92,7 @@ export const MACRO_INDICATORS: MacroIndicator[] = [
     delta: "−0.4pp YoY",
     deltaDirection: "down",
     context:
-      "Median earnings for women working full-time, year-round are roughly 84¢ for every $1 earned by men — an uncontrolled gap that widens for mothers and women of color.",
+      "Women working full-time, year-round earn about 84 cents for every dollar men make. That gap gets wider for mothers and for women of color — the headline number is just the start.",
     source: "U.S. Census Bureau, Current Population Survey (approx.)",
     phenomenon: "#GenderWealthGap",
   },
@@ -105,7 +105,7 @@ export const MACRO_INDICATORS: MacroIndicator[] = [
     delta: "+0.6pp YoY",
     deltaDirection: "up",
     context:
-      "The share of working-age women employed or seeking work. It sits well below men's (~68%), a gap shaped heavily by caregiving responsibilities and the structure of paid leave.",
+      "About 57% of working-age women are employed or looking for work, compared to roughly 68% of men. A big chunk of that gap comes down to who handles caregiving and how bad paid leave is.",
     source: "BLS, Current Population Survey (approx.)",
     phenomenon: "#CareEconomy",
   },
@@ -118,7 +118,7 @@ export const MACRO_INDICATORS: MacroIndicator[] = [
     delta: "per child",
     deltaDirection: "down",
     context:
-      "Mothers experience a wage penalty of roughly 4% per child, while fathers often see a 'fatherhood bonus.' Long-run earnings divergence after a first birth can exceed 20%.",
+      "Mothers take about a 4% pay hit per child on average. Fathers often get a small bump instead. By the time the kids are grown, that first birth can mean 20%+ less in lifetime earnings.",
     source: "Budig & England (2001); Kleven et al. (2019)",
     phenomenon: "#MotherhoodPenalty",
   },
@@ -131,7 +131,7 @@ export const MACRO_INDICATORS: MacroIndicator[] = [
     delta: "vs 2.6 hrs (men)",
     deltaDirection: "up",
     context:
-      "Women perform substantially more unpaid household and care labor each day. Valued at replacement wages, this 'invisible' output rivals entire industrial sectors of GDP.",
+      "Women do about 4.2 hours of unpaid housework and care work per day — men do about 2.6. Price that at what you'd pay someone to do it, and you're looking at an industry the size of a major sector of GDP.",
     source: "BLS American Time Use Survey (approx.)",
     phenomenon: "#UnpaidLaborValue",
   },
@@ -144,7 +144,7 @@ export const MACRO_INDICATORS: MacroIndicator[] = [
     delta: "per $1 of wealth",
     deltaDirection: "down",
     context:
-      "Beyond wages, accumulated wealth diverges sharply: single women hold a fraction of the net worth of single men, compounding through retirement via lower lifetime contributions.",
+      "The pay gap doesn't stop at paychecks. Single women hold a fraction of the net worth that single men do — lower earnings mean less saved, and that gap keeps growing through retirement.",
     source: "Federal Reserve SCF analyses (approx.)",
     phenomenon: "#GenderWealthGap",
   },
@@ -157,7 +157,7 @@ export const MACRO_INDICATORS: MacroIndicator[] = [
     delta: "+1.2pp YoY",
     deltaDirection: "up",
     context:
-      "Representation thins dramatically up the seniority ladder — the 'leaky pipeline.' The first rung from analyst to manager is where the largest attrition occurs.",
+      "Only about 10% of Fortune 500 CEOs are women. The drop-off starts early — the jump from analyst to manager is where most of the attrition happens.",
     source: "Fortune; LeanIn/McKinsey Women in the Workplace (approx.)",
     phenomenon: "#GlassCeiling",
   },
@@ -170,7 +170,7 @@ export const MACRO_INDICATORS: MacroIndicator[] = [
     delta: "Duncan dissimilarity",
     deltaDirection: "flat",
     context:
-      "Roughly half of all workers would need to change occupations to achieve an even gender distribution. Female-dominated fields systematically command lower wages.",
+      "You'd have to move about half of all workers to different jobs to get an even gender split across occupations. Fields that are mostly women pay less — and the pay drops more as a field gets more female.",
     source: "Duncan & Duncan dissimilarity, ACS occupation data (approx.)",
     phenomenon: "#OccupationalSegregation",
   },
@@ -183,7 +183,7 @@ export const MACRO_INDICATORS: MacroIndicator[] = [
     delta: "lower pensions",
     deltaDirection: "down",
     context:
-      "Lower lifetime earnings and career interruptions translate into materially smaller retirement balances — the wage gap's final, compounding act.",
+      "Lower lifetime earnings and career breaks mean smaller retirement accounts — about 30% less pension income for women. The pay gap's last act is a retirement gap.",
     source: "OECD Pensions at a Glance (approx.)",
     phenomenon: "#GenderWealthGap",
   },
@@ -250,7 +250,7 @@ export const GLOSSARY: Record<string, EconomicConcept> = {
   occupationalSegregation: {
     term: "Occupational Segregation",
     definition:
-      "The systematic sorting of genders into different occupations. Crucially, the wages of 'female' occupations tend to fall as they feminize — the work is devalued, not merely differently chosen.",
+      "The systematic sorting of genders into different occupations. When a field gets more female, the pay tends to drop — the work gets devalued, not just differently chosen.",
     theorist: "Paula England",
   },
   monopsony: {
